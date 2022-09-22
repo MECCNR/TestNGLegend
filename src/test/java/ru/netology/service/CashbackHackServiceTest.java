@@ -21,8 +21,7 @@ public class CashbackHackServiceTest {
 
     @Test
     // ЗДЕСЬ ОШИБКА
-    // в случае с ровно тысячей программа не заправшивает у вас 100 рублей, а вместо этого он
-    // требует от вас все 1000
+    // в случае с ровно тысячей программа требует от вас все 1000 рублей
     public void boundaryEqualTest() {
         exceptionRule.expect(java.lang.AssertionError.class);
         int actual = adv.remain(1000);
@@ -32,7 +31,7 @@ public class CashbackHackServiceTest {
 
     @Test
     // ЗДЕСЬ ДРУГАЯ ОШИБКА!
-    // в этом случае вместо 90 рублей он требует все 990
+    // в этом случае он требует все 990 рублей
     public void boundaryMoreThanTest() {
         exceptionRule.expect(java.lang.AssertionError.class);
         int actual = adv.remain(3010);
