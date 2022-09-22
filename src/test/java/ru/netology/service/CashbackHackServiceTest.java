@@ -31,7 +31,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    // ЗДЕСЬ ДРУГАЯ ОШИБКА
+    // ЗДЕСЬ ДРУГАЯ ОШИБКА!
     // в этом случае вместо 90 рублей он требует все 990
     public void boundaryMoreThanTest() {
         exceptionRule.expect(java.lang.AssertionError.class);
