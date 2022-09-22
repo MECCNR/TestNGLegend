@@ -30,7 +30,7 @@ public class CashbackHackServiceTest {
     // в этом случае вместо 90 рублей он требует все 990
     public void boundaryMoreThanTest() {
         int actual = adv.remain(3010);
-        int expected = 90;
+        int expected = 0;
         assertEquals(expected, actual);
     }
 }
