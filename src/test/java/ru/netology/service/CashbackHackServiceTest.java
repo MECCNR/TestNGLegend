@@ -36,7 +36,7 @@ public class CashbackHackServiceTest {
     public void boundaryMoreThanTest() {
         exceptionRule.expect(java.lang.AssertionError.class);
         int actual = adv.remain(3010);
-        int expected = 90;
+        int expected = 0;
         assertEquals(expected, actual);
     }
 }
