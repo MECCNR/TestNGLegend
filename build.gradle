@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+
+[compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+}
+
+test {
+    useJUnit()
+}
