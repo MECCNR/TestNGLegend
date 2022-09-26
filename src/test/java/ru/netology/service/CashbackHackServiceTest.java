@@ -30,6 +30,7 @@ public class CashbackHackServiceTest {
     public void boundaryMoreThanTest() {
         int actual = adv.remain(3010);
         int expected = 0;
+
         assertEquals(expected, actual);
     }
 }
