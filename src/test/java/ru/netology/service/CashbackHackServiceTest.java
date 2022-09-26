@@ -15,7 +15,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expectedExceptions = java.lang.AssertionError.class)
     // ЗДЕСЬ ОШИБКА
     // в случае с ровно тысячей программа требует от вас 1000 рублей
     public void boundaryEqualTest() {
@@ -24,7 +24,7 @@ public class CashbackHackServiceTest {
         assertEquals(expected, actual);
     }
 
-    @Test
+    @Test(expectedExceptions = java.lang.AssertionError.class)
     // ЗДЕСЬ ДРУГАЯ ОШИБКА
     // в этом случае он требует все 990
     public void boundaryMoreThanTest() {
