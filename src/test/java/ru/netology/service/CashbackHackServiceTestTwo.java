@@ -22,8 +22,7 @@ public class CashbackHackServiceTestTwo {
     public void boundaryEqualTest() {;
         int actual = adv.remain(1000);
         int expected = 0;
-        assertThrows(AssertionError.class,
-                ()->assertEquals(expected, actual));
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -32,7 +31,6 @@ public class CashbackHackServiceTestTwo {
     public void boundaryMoreThanTest() {
         int actual = adv.remain(3010);
         int expected = 0;
-        assertThrows(AssertionError.class,
-                ()->assertEquals(expected, actual));
+        assertEquals(expected, actual);
     }
 }

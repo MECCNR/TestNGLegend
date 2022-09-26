@@ -9,8 +9,6 @@ import static org.junit.Assert.assertEquals;
 public class CashbackHackServiceTest {
 
     public CashbackHackService adv = new CashbackHackService();
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
 
     @Test
     public void boundaryTest() {
@@ -23,7 +21,6 @@ public class CashbackHackServiceTest {
     // ЗДЕСЬ ОШИБКА
     // в случае с ровно тысячей программа требует от вас все 1000 рублей
     public void boundaryEqualTest() {
-        exceptionRule.expect(java.lang.AssertionError.class);
         int actual = adv.remain(1000);
         int expected = 0;
         assertEquals(expected, actual);
@@ -33,7 +30,6 @@ public class CashbackHackServiceTest {
     // ЗДЕСЬ ДРУГАЯ ОШИБКА!
     // в этом случае он требует все 990 рублей
     public void boundaryMoreThanTest() {
-        exceptionRule.expect(java.lang.AssertionError.class);
         int actual = adv.remain(3010);
         int expected = 0;
         assertEquals(expected, actual);
